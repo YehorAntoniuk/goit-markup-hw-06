@@ -325,7 +325,32 @@ ul {
     transform: translate(-50%, -50%);
 }
 
+/* modal form */
+
+.modal-form {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 12px;
+}
+
+.form-group {
+    display: flex;
+    align-items: start;
+}
+
+.modal-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+
+    color: var(--secondary-cl);
+}
+
+
+
 /* секция особенности */
+
 .benefits {
     padding-bottom: 0;
 }
