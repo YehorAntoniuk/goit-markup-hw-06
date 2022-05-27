@@ -62,27 +62,73 @@
     </header>
     <main>
       <!--Секция герой-->
+      is-hidden
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button class="btn hero-btn" type="button" data-modal-open>Заказать услугу</button>
-          <div class="backdrop is-hidden" data-modal>
+          <div class="backdrop" data-modal>
             <div class="modal-wrapper">
               <button class="modal-btn" data-modal-close>
                 <svg class="icon-close-modal" width="11" height="11">
                   <use href="./images/sprite.svg#icon-Vector"></use>
                 </svg>
               </button>
-              <b class="modal-text">Оставьте свои данные, мы вам перезвоним</b>
               <form class="modal-form">
-                <label class="form-group">
-                  <input class="form-input" type="text" name="name" autocomplete="off" />
-                  <span class="form-label">Имя</span>
-                </label>
-                <label class="form-group">
-                  <input class="form-input" type="tel" name="phone" autocomplete="off" />
-                  <span class="form-label">Телефон</span>
-                </label>
+                <b class="modal-text">Оставьте свои данные, мы вам перезвоним</b>
+                <div class="modal-group">
+                  <label class="modal-label">
+                    <span class="label-text">Имя</span>
+                    <input class="input-label" type="text" name="user-name" />
+                    <svg class="label-icon" width="18" height="18">
+                      <use href="./images/sprite.svg#icon-person-modal"></use>
+                    </svg>
+                  </label>
+                  <label class="modal-label">
+                    <span class="label-text">Телефон</span>
+                    <input class="input-label" type="tel" name="user-phone" />
+                    <svg class="label-icon" width="18" height="18">
+                      <use href="./images/sprite.svg#icon-phone-modal"></use>
+                    </svg>
+                  </label>
+                  <label class="modal-label">
+                    <span class="label-text">Почта</span>
+                    <input class="input-label" type="email" name="user-email" />
+                    <svg class="label-icon" width="18" height="18">
+                      <use href="./images/sprite.svg#icon-email-modal"></use>
+                    </svg>
+                  </label>
+                  <label class="modal-label">
+                    <span class="label-text">Комментарий</span>
+                    <textarea
+                      class="label-textarea"
+                      name="user-comment"
+                      placeholder="Введите текст"
+                    ></textarea>
+                  </label>
+                  <label class="label-checkbox">
+                    <input
+                      class="checkbox"
+                      type="checkbox"
+                      name="checkbox"
+                      value=""
+                      aria-hidden=""
+                      tabindex=""
+                    />
+                    <span class="checked">
+                      <svg class="" width="18" height="18">
+                        <use href=""></use>
+                      </svg>
+                    </span>
+                    <span>
+                      Соглашаюсь с рассылкой и принимаю
+                      <a class="policy-link" href="" target="_blank" rel="noopener norefferer"
+                        >Условия договора</a
+                      >
+                    </span>
+                  </label>
+                  <button type="submit">Отправить</button>
+                </div>
               </form>
             </div>
           </div>

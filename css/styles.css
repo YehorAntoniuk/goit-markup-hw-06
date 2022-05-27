@@ -327,7 +327,7 @@ ul {
 
 /* modal form */
 
-.modal-form {
+/* .modal-form {
     width: 100%;
     padding-left: 40px;
     padding-right: 40px;
@@ -337,9 +337,11 @@ ul {
 .form-group {
     display: flex;
     align-items: start;
-}
+} */
 
 .modal-text {
+    margin-bottom: 12px;
+
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -347,7 +349,52 @@ ul {
     color: var(--secondary-cl);
 }
 
+.modal-form {
+    padding: 40px;
+}
 
+.modal-label {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal-text, 
+.modal-label,
+.label-textarea,
+.label-checkbox,
+.label-text {
+    display: block;
+}
+
+.input-label,
+.label-textarea {
+    width: 100%;
+}
+
+.label-text {
+    text-align: left;
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1,16;
+    
+    letter-spacing: 0.01em;
+}
+
+.label-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+}
+
+.input-label {
+    padding: 12px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
 
 /* секция особенности */
 
