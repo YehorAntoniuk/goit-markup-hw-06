@@ -841,12 +841,14 @@ color: var(--address-link-cl);
 }
 
 .join-block {
-    margin-right: 94px;
+    /* margin-right: 94px; */
+    /* margin-left: auto; */
 }
 
 .subscribe-block {
-    margin-right: auto;
-    width: 100%;
+    /* margin-right: auto; */
+    margin-left: auto;
+    /* width: 100%; */
 }
 
 .subscribe-content {
@@ -858,7 +860,8 @@ color: var(--address-link-cl);
 .subscribe-block input {
     margin-right: 12px;
     padding: 15px;
-    width: 100%;
+    /* width: 100%; */
+    width: 358px;
     background-color: inherit;
     color: var(--wigte-cl);
     outline: transparent;
