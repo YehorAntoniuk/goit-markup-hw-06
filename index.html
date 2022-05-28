@@ -62,14 +62,14 @@
     </header>
     <main>
       <!--Секция герой-->
-      is-hidden
+
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
           <button class="btn hero-btn" type="button" data-modal-open>Заказать услугу</button>
-          <div class="backdrop" data-modal>
+          <div class="backdrop is-hidden" data-modal>
             <div class="modal-wrapper">
-              <button class="modal-btn" data-modal-close>
+              <button class="modal-btn btn" data-modal-close>
                 <svg class="icon-close-modal" width="11" height="11">
                   <use href="./images/sprite.svg#icon-Vector"></use>
                 </svg>
@@ -107,17 +107,10 @@
                     ></textarea>
                   </label>
                   <label class="label-checkbox">
-                    <input
-                      class="checkbox"
-                      type="checkbox"
-                      name="checkbox"
-                      value=""
-                      aria-hidden=""
-                      tabindex=""
-                    />
+                    <input class="checkbox visually-hidden" type="checkbox" name="checkbox" />
                     <span class="checked">
-                      <svg class="" width="18" height="18">
-                        <use href=""></use>
+                      <svg class="checked-icon" width="16" height="15">
+                        <use href="./images/sprite.svg#icon-check"></use>
                       </svg>
                     </span>
                     <span>
@@ -127,7 +120,7 @@
                       >
                     </span>
                   </label>
-                  <button type="submit">Отправить</button>
+                  <button class="modal-submit btn" type="submit">Отправить</button>
                 </div>
               </form>
             </div>
@@ -594,6 +587,18 @@
             </li>
           </ul>
         </div>
+        <form class="subscribe-block">
+          <h3 class="subscribe-titel">Подпишитесь на рассылку</h3>
+          <div class="subscribe-content">
+            <input type="email" name="email" placeholder="E-mail" />
+            <button class="subscribe-btn btn" type="submit">
+              Подписаться
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send-footer"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
 

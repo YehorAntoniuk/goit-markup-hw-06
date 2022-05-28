@@ -95,6 +95,7 @@ ul {
 
 .btn {
     cursor: pointer;
+    border: none;
 }
 
 .logo { 
@@ -314,8 +315,6 @@ ul {
     border-radius: 50%;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
-
-    cursor: pointer;
 }
 
 .icon-Vector {
@@ -338,6 +337,10 @@ ul {
     display: flex;
     align-items: start;
 } */
+
+.modal-group {
+    text-align: left;
+}
 
 .modal-text {
     margin-bottom: 12px;
@@ -372,7 +375,6 @@ ul {
 }
 
 .label-text {
-    text-align: left;
     margin-bottom: 4px;
 
     font-weight: 400;
@@ -384,16 +386,119 @@ ul {
 
 .label-icon {
     position: absolute;
-    top: 50%;
+    bottom: 12px;
     left: 12px;
+
+    transition: fill var(--anim);
 }
 
 .input-label {
     padding: 12px;
     padding-left: 42px;
+    
+    outline: transparent;
+    transition: border var(--anim);
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+}
+
+.input-label:hover,
+.input-label:focus {
+    border: 1px solid var(--accent-cl);
+}
+
+.input-label:hover+.label-icon {
+    fill: var(--accent-cl);
+}
+
+.label-textarea {
+    resize: none;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    
+    color: rgba(117, 117, 117, 0.5);
+
+    outline: transparent;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.label-textarea:focus {
+    border: 1px solid var(--accent-cl);
+}
+
+.label-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+
+    border-radius: 2px;
+
+    outline: 2px solid var(--secondary-cl);
+    outline-offset: -2px;
+
+    transition: background-color var(--anim);
+}
+
+.checkbox:checked+.checked {
+    outline: 2px solid var(--accent-cl);
+    background-color: var(--accent-cl);
+}
+
+.checked-icon {
+    opacity: 0;
+
+    transition: opacity var(--anim);
+}
+
+.checkbox:checked + .checked .checked-icon {
+    opacity: 1;
+}
+
+.policy-link {
+    color: var(--accent-cl);
+    text-decoration: underline;
+}
+
+.modal-submit {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px;
+
+    border-radius: 4px;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    
+    letter-spacing: 0.06em;
+    
+    color: var(--wigte-cl);
+    background-color: var(--accent-cl);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-submit:hover,
+.modal-submit:focus {
+    background-color: var(--btn-hover-cl);
 }
 
 /* секция особенности */
@@ -691,11 +796,16 @@ color: var(--address-link-cl);
     margin-right: 70px;
 }
 
-.join-title {
+.join-title,
+.subscribe-titel {
     margin-bottom: 20px;
-    color: var(--wigte-cl);
-    text-transform: uppercase;
     font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: var(--wigte-cl);
 }
 
 .socials.list {
@@ -728,6 +838,69 @@ color: var(--address-link-cl);
 .socials .link:hover,
 .socials .link:focus {
     background-color: var(--accent-cl);
+}
+
+.join-block {
+    margin-right: 94px;
+}
+
+.subscribe-block {
+    margin-right: auto;
+    width: 100%;
+}
+
+.subscribe-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.subscribe-block input {
+    margin-right: 12px;
+    padding: 15px;
+    width: 100%;
+    background-color: inherit;
+    color: var(--wigte-cl);
+    outline: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    transition: border var(--anim);
+}
+
+.subscribe-block input:hover,
+.subscribe-block input:focus {
+    border: 1px solid var(--accent-cl);
+}
+
+.subscribe-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 28px;
+    width: 200px;
+    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--wigte-cl);
+    background-color: var(--accent-cl);
+    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    
+    transition: background-color var(--anim);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+    background-color: var(--btn-hover-cl);
+}
+
+.subscribe-icon {
+    margin-left: 10px;
 }
 
 /* секция портфолио */
