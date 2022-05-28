@@ -357,7 +357,7 @@ ul {
 }
 
 .modal-label {
-    position: relative;
+    /* position: relative; */
     margin-bottom: 10px;
 }
 
@@ -384,10 +384,17 @@ ul {
     letter-spacing: 0.01em;
 }
 
+.input-box {
+    position: relative;
+    width: 100%;
+}
+
 .label-icon {
     position: absolute;
-    bottom: 12px;
+    top: 50%;
     left: 12px;
+
+    transform: translateY(-50%);
 
     transition: fill var(--anim);
 }
