@@ -415,7 +415,8 @@ ul {
     border: 1px solid var(--accent-cl);
 }
 
-.input-label:hover+.label-icon {
+.input-label:hover + .label-icon,
+.input-label:focus + .label-icon {
     fill: var(--accent-cl);
 }
 
@@ -464,7 +465,7 @@ ul {
     transition: background-color var(--anim);
 }
 
-.checkbox:checked+.checked {
+.checkbox:checked + .checked {
     outline: 2px solid var(--accent-cl);
     background-color: var(--accent-cl);
 }
