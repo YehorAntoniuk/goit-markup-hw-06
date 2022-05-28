@@ -438,7 +438,8 @@ ul {
     border-radius: 4px;
 }
 
-.label-textarea:focus {
+.label-textarea:focus,
+.label-textarea:hover {
     border: 1px solid var(--accent-cl);
 }
 
