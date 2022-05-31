@@ -419,8 +419,14 @@ ul {
     border-radius: 4px;
 }
 
-.input-label:hover {
+.input-label:hover,
+.input-label:focus {
     border: 1px solid var(--accent-cl);
+}
+
+.label-icon:hover,
+.label-icon:focus {
+    fill: var(--accent-cl);
 }
 
 .input-label:hover + .label-icon,
